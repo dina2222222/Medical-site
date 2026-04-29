@@ -2,21 +2,53 @@ body {
   font-family: Arial;
   direction: rtl;
   margin: 0;
-  background: #f5f7fa;
+  background: #f4f7fb;
 }
 
-header {
-  background: #2c7be5;
+/* الهيدر */
+.hero {
+  background: url("https://images.unsplash.com/photo-1588776814546-1ffcf47267a5");
+  background-size: cover;
+  height: 250px;
+  position: relative;
+}
+
+.overlay {
+  background: rgba(0,0,0,0.5);
   color: white;
   text-align: center;
-  padding: 20px;
+  padding-top: 70px;
+  height: 100%;
 }
 
+/* السيكشن */
+.section {
+  padding: 20px;
+  text-align: center;
+}
+
+/* الجريد */
+.grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.box {
+  background: white;
+  margin: 10px;
+  padding: 20px;
+  width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* الفورم */
 .form-section {
   background: white;
   margin: 20px;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
 input, select, textarea {
@@ -28,28 +60,31 @@ input, select, textarea {
 }
 
 button {
-  background: #28a745;
+  background: #2c7be5;
   color: white;
   padding: 12px;
   border: none;
   width: 100%;
   border-radius: 8px;
-  cursor: pointer;
 }
 
-button:hover {
-  background: #218838;
+/* الخدمات */
+.services {
+  text-align: center;
 }
 
-.result-section {
-  background: #ffffff;
-  margin: 20px;
-  padding: 20px;
+.service {
+  display: inline-block;
+  background: #00c6ff;
+  color: white;
+  margin: 10px;
+  padding: 15px;
   border-radius: 10px;
 }
 
+/* الفوتر */
 footer {
+  background: #eee;
   text-align: center;
   padding: 10px;
-  background: #eee;
-  }
+}
