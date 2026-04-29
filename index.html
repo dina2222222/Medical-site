@@ -1,44 +1,76 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <title>نظام التشخيص الطبي الذكي</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>نظام التشخيص الطبي الذكي</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <header>
+<header class="hero">
+  <div class="overlay">
     <h1>🩺 نظام التشخيص الطبي الذكي</h1>
-    <p>تشخيص مبدئي سريع بناءً على الأعراض</p>
-  </header>
+    <p>تحليل الأعراض - تشخيص مبدئي - توصيات طبية</p>
+  </div>
+</header>
 
-  <section class="form-section">
-    <h2>إدخال البيانات</h2>
+<section class="section">
+  <h2>💡 فكرة المشروع</h2>
+  <p>
+    نظام يعتمد على الذكاء الاصطناعي لتحليل الأعراض وتقديم تشخيص مبدئي سريع يساعد في فهم الحالة الصحية.
+  </p>
+</section>
 
-    <input type="text" id="name" placeholder="الاسم">
-    <input type="number" id="age" placeholder="العمر">
+<section class="grid">
+  <div class="box">
+    <h3>🎯 الأهداف</h3>
+    <ul>
+      <li>تحليل ذكي للأعراض</li>
+      <li>سرعة في النتائج</li>
+      <li>دقة في التقييم</li>
+    </ul>
+  </div>
 
-    <select id="gender">
-      <option value="">اختر النوع</option>
-      <option value="ذكر">ذكر</option>
-      <option value="أنثى">أنثى</option>
-    </select>
+  <div class="box">
+    <h3>⚙️ طريقة العمل</h3>
+    <p>إدخال البيانات → تحليل → تشخيص → توصيات</p>
+  </div>
 
-    <textarea id="symptoms" placeholder="اكتب الأعراض هنا..."></textarea>
+  <div class="box">
+    <h3>📊 النتائج</h3>
+    <p>تحسين تجربة المستخدم ودعم اتخاذ القرار الطبي</p>
+  </div>
+</section>
 
-    <button onclick="analyze()">تحليل الحالة</button>
-  </section>
+<section class="form-section">
+  <h2>📝 إدخال البيانات</h2>
 
-  <section class="result-section" id="result">
-    <h2>النتيجة</h2>
-    <p id="diagnosis"></p>
-    <p id="advice"></p>
-  </section>
+  <input type="text" placeholder="الاسم">
+  <input type="number" placeholder="العمر">
 
-  <footer>
-    <p>© مشروع تشخيص طبي تجريبي</p>
-  </footer>
+  <select>
+    <option>النوع</option>
+    <option>ذكر</option>
+    <option>أنثى</option>
+  </select>
 
-  <script src="script.js"></script>
+  <textarea placeholder="الأعراض"></textarea>
+
+  <button>تحليل الحالة</button>
+</section>
+
+<section class="services">
+  <h2>🛠 الخدمات</h2>
+
+  <div class="service">تحليل الأعراض</div>
+  <div class="service">تشخيص مبدئي</div>
+  <div class="service">توصيات طبية</div>
+</section>
+
+<footer>
+  <p>© نظام طبي ذكي - مشروع جامعي</p>
+</footer>
+
 </body>
-</html>
+  </html>
