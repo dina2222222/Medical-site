@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>نظام التشخيص الطبي الذكي</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>🩺 نظام التشخيص الطبي الذكي</h1>
+    <p>تشخيص مبدئي سريع بناءً على الأعراض</p>
+  </header>
+
+  <section class="form-section">
+    <h2>إدخال البيانات</h2>
+
+    <input type="text" id="name" placeholder="الاسم">
+    <input type="number" id="age" placeholder="العمر">
+
+    <select id="gender">
+      <option value="">اختر النوع</option>
+      <option value="ذكر">ذكر</option>
+      <option value="أنثى">أنثى</option>
+    </select>
+
+    <textarea id="symptoms" placeholder="اكتب الأعراض هنا..."></textarea>
+
+    <button onclick="analyze()">تحليل الحالة</button>
+  </section>
+
+  <section class="result-section" id="result">
+    <h2>النتيجة</h2>
+    <p id="diagnosis"></p>
+    <p id="advice"></p>
+  </section>
+
+  <footer>
+    <p>© مشروع تشخيص طبي تجريبي</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
