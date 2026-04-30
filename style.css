@@ -1,12 +1,12 @@
 :root {
     --main-blue: #0077b6;
     --dark-blue: #03045e;
-    --light-bg: #fdfdfd;
+    --bg-color: #f4f7f6;
 }
 
 body {
     font-family: 'Cairo', sans-serif;
-    background-color: var(--light-bg);
+    background-color: var(--bg-color);
     margin: 0;
     direction: rtl;
     color: #333;
@@ -15,76 +15,70 @@ body {
 .main-header {
     background: var(--dark-blue);
     color: white;
-    padding: 40px;
+    padding: 30px;
     text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .content-wrapper {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px;
 }
 
-.topic-row {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    margin-bottom: 60px;
-    padding: 20px;
+.topic-block {
     background: white;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    margin-bottom: 40px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column; /* جعل العناصر تحت بعض */
+    gap: 20px;
 }
 
-.topic-row.reverse {
-    flex-direction: row-reverse;
-}
-
-.text-side {
-    flex: 1.5;
-}
-
-.text-side h2 {
+.text-content h2 {
     color: var(--main-blue);
-    border-bottom: 2px solid var(--main-blue);
-    display: inline-block;
+    font-size: 1.6rem;
     margin-bottom: 15px;
+    border-right: 5px solid var(--main-blue);
+    padding-right: 15px;
 }
 
-.image-side {
-    flex: 1;
-}
-
-.image-side img {
+.image-content img {
     width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    height: auto;
+    border-radius: 8px;
+    display: block;
 }
 
 .bullet-points {
     list-style: none;
-    padding: 0;
+    padding-right: 10px;
 }
 
 .bullet-points li {
-    padding: 10px 0;
-    border-bottom: 1px dashed #eee;
+    padding: 8px 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.bullet-points li:last-child {
+    border-bottom: none;
 }
 
 .bullet-points li::before {
-    content: "← ";
+    content: "•";
     color: var(--main-blue);
     font-weight: bold;
+    margin-left: 10px;
 }
 
 footer {
     text-align: center;
-    padding: 20px;
-    background: #eee;
-}
-
-@media (max-width: 768px) {
-    .topic-row, .topic-row.reverse {
-        flex-direction: column;
-    }
+    padding: 30px;
+    background: #e9ecef;
+    color: #666;
 }
