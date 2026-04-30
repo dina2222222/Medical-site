@@ -5,7 +5,7 @@
 
 body {
     font-family: 'Cairo', sans-serif;
-    background-color: #f0f2f5;
+    background-color: #f8f9fa;
     margin: 0;
     direction: rtl;
     color: #333;
@@ -16,7 +16,6 @@ body {
     color: white;
     padding: 25px;
     text-align: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .content-wrapper {
@@ -27,72 +26,49 @@ body {
 
 .topic-block {
     background: white;
-    margin-bottom: 40px;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    margin-bottom: 35px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-.text-content {
-    width: 100%;
-    margin-bottom: 25px;
 }
 
 .text-content h2 {
     color: var(--primary);
-    border-right: 6px solid var(--primary);
-    padding-right: 15px;
-    margin-bottom: 20px;
-    font-size: 1.7rem;
+    border-right: 5px solid var(--primary);
+    padding-right: 12px;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
 }
 
 .text-content p {
-    line-height: 1.9;
-    font-size: 1.15rem;
+    line-height: 1.8;
+    font-size: 1.1rem;
     text-align: justify;
 }
 
 .image-content {
-    width: 100%;
-    max-width: 600px;
+    margin-top: 20px;
+    text-align: center;
 }
 
 .image-content img {
     width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.bullet-points {
-    padding-right: 20px;
-    list-style: none;
-}
-
-.bullet-points li {
-    margin-bottom: 12px;
-    font-size: 1.1rem;
-    position: relative;
-    padding-right: 25px;
-}
-
-.bullet-points li::before {
-    content: "●";
-    color: var(--primary);
-    position: absolute;
-    right: 0;
+    max-width: 600px; /* مقاس متوسط ومناسب */
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 footer {
     text-align: center;
-    padding: 40px;
+    padding: 30px;
     color: #888;
+    font-size: 0.9rem;
 }
 
+/* ضبط المقاسات للموبايل */
 @media (max-width: 600px) {
     .content-wrapper { padding: 10px; }
-    .text-content h2 { font-size: 1.4rem; }
+    .text-content h2 { font-size: 1.3rem; }
 }
