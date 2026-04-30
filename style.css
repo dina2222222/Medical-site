@@ -1,234 +1,90 @@
-/* الألوان والخطوط الأساسية */
 :root {
-    --primary-blue: #007bff;
-    --background-dark: #121212; /* لون الخلفية الداكنة */
-    --card-background: #ffffff; /* لون الكروت البيضاء */
-    --text-color-dark: #333333;
-    --text-color-light: #ffffff;
-    --font-family: 'Cairo', sans-serif;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    --main-blue: #0077b6;
+    --dark-blue: #03045e;
+    --light-bg: #fdfdfd;
 }
 
 body {
-    font-family: var(--font-family);
-    line-height: 1.6;
-    background-color: var(--background-dark); /* تم تعيين خلفية الموقع كله على الداكن لتطابق الصور */
-    color: var(--text-color-light);
-    direction: rtl; /* اتجاه النص من اليمين لليسار */
-    padding: 20px;
+    font-family: 'Cairo', sans-serif;
+    background-color: var(--light-bg);
+    margin: 0;
+    direction: rtl;
+    color: #333;
 }
 
-.container {
-    max-width: 800px; /* جعل الموقع بحد أقصى لعرض معين لتطابق شكل السلايد */
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* الأقسام */
-.section {
-    margin-bottom: 40px;
-}
-
-.dark-bg {
-    background-color: var(--background-dark);
-}
-
-.white-bg {
-    background-color: var(--card-background);
-    color: var(--text-color-dark);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-/* العناوين والكتل النصية */
-h1.page-title {
+.main-header {
+    background: var(--dark-blue);
+    color: white;
+    padding: 40px;
     text-align: center;
-    color: var(--text-color-light);
-    margin-bottom: 30px;
-    font-size: 1.8em;
 }
 
-h2 {
-    color: var(--text-color-light);
-    margin-top: 20px;
-    margin-bottom: 10px;
+.content-wrapper {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
 }
 
-h3 {
+.topic-row {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 60px;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.topic-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.text-side {
+    flex: 1.5;
+}
+
+.text-side h2 {
+    color: var(--main-blue);
+    border-bottom: 2px solid var(--main-blue);
+    display: inline-block;
     margin-bottom: 15px;
-    font-weight: bold;
 }
 
-.white-text {
-    color: var(--text-color-light);
-}
-
-.text-block {
-    margin-bottom: 20px;
-}
-
-/* تصميم الجزء العلوي (Hero) */
-.hero-block {
-    background-color: var(--card-background);
-    color: var(--text-color-dark);
-    display: flex;
-    padding: 20px;
-    border-radius: 8px;
-    align-items: center;
-}
-
-.hero-image-container {
+.image-side {
     flex: 1;
-    text-align: center;
 }
 
-.hero-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
+.image-side img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.hero-text-container {
-    flex: 1;
-    padding-left: 20px;
-}
-
-.hero-title {
-    color: var(--primary-blue);
-    font-size: 1.6em;
-    margin-bottom: 10px;
-}
-
-/* نظرة عامة */
-.overview-block {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.overview-text {
-    flex: 2;
-}
-
-.overview-image {
-    flex: 1;
-    text-align: center;
-}
-
-.inline-doctor-img {
-    max-width: 100px;
-}
-
-/* تصميم الكروت بتدرجات لونية */
-.methodology-card {
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-}
-
-.blue-gradient-bg {
-    background: linear-gradient(135deg, #a7f3d0 0%, #00d2ff 50%, #0047ff 100%);
-    color: var(--text-color-dark);
-}
-
-.data-entry-card {
-    background-color: #ffe066; /* لون خلفية أصفر لنموذج الإدخال */
-    color: var(--text-color-dark);
-}
-
-.conclusions-card {
-    background-color: #a7f3d0; /* لون خلفية أخضر للنتائج */
-    color: var(--text-color-dark);
-}
-
-.card-icons-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 15px;
-}
-
-.card-icon-item {
-    flex: 1;
-    text-align: center;
-    max-width: 30%;
-}
-
-.card-icon-item img {
-    max-width: 100%;
-    height: auto;
-}
-
-.hand-icon-item .emoji-icon {
-    font-size: 3em;
-    display: block;
-}
-
-.icon-label {
-    margin-top: 5px;
-    font-size: 0.9em;
-}
-
-/* تصميم الخدمات */
-.services-content,
-.conclusions-content,
-.conclusion-content {
-    display: flex;
-    align-items: flex-start;
-}
-
-.services-image,
-.conclusions-chart,
-.conclusion-image {
-    flex: 1;
-    text-align: center;
-}
-
-.services-text,
-.conclusions-text,
-.conclusion-text {
-    flex: 2;
-    padding-right: 20px;
-}
-
-.inline-services-img,
-.inline-chart-img,
-.inline-final-img {
-    max-width: 150px;
-    height: auto;
-}
-
-/* تنسيق القوائم */
-ul {
-    list-style-type: none;
+.bullet-points {
+    list-style: none;
     padding: 0;
 }
 
-ul li {
-    margin-bottom: 8px;
+.bullet-points li {
+    padding: 10px 0;
+    border-bottom: 1px dashed #eee;
 }
 
-.services-text ul li:first-child,
-.services-text ul li:nth-child(3),
-.services-text ul li:nth-child(5) {
+.bullet-points li::before {
+    content: "← ";
+    color: var(--main-blue);
     font-weight: bold;
 }
 
-/* الخاتمة */
-.conclusion-card {
+footer {
+    text-align: center;
     padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
+    background: #eee;
 }
 
-.final-card .inline-final-img {
-    max-width: 200px;
+@media (max-width: 768px) {
+    .topic-row, .topic-row.reverse {
+        flex-direction: column;
+    }
 }
